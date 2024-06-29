@@ -8,18 +8,16 @@ import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 import ReactDOM from 'react-dom';
 
 import Header from '@edx/frontend-component-header';
-import FooterSlot from '@openedx/frontend-slot-footer';
 import messages from './i18n';
 import ExamplePage from './example/ExamplePage';
 
 import './index.scss';
+import AllRoutes from './AllRoutes';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
     <AppProvider>
-      <Header />
-      <ExamplePage />
-      <FooterSlot />
+      <AllRoutes />
     </AppProvider>,
     document.getElementById('root'),
   );
