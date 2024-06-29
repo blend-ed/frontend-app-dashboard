@@ -1,7 +1,7 @@
 import { Col, Image, Row, Truncate } from "@openedx/paragon";
 import { ChevronLeft, ChevronRight, KeyboardArrowDown } from "@openedx/paragon/icons";
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const DashboardIndex = () => {
 
@@ -45,12 +45,14 @@ const DashboardIndex = () => {
                             </li>
                         </ul>
                         <ul className="list-unstyled d-flex flex-column ml-3">
-                            <li>
+                            <Link className="li d-flex align-items-center" to="/">
                                 <div className="nav-box-sm" />
-                            </li>
-                            <li>
+                                {navOpen && <h5 className="mb-0 ml-2">Home</h5>}
+                            </Link>
+                            <Link className="li d-flex align-items-center" to="/about">
                                 <div className="nav-box-sm" />
-                            </li>
+                                {navOpen && <h5 className="mb-0 ml-2">About</h5>}
+                            </Link>
                             <li>
                                 <div className="nav-box-sm" />
                             </li>
