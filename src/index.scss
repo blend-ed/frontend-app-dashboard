@@ -21,9 +21,9 @@
     border: 1px solid $gray-300;
     height: 1.4rem;
     width: 1.4rem;
+    min-width: 1.4rem;
     border-radius: $border-radius;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    padding: 0.5rem;
 }
 
 .img-box {

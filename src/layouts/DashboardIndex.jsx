@@ -45,18 +45,18 @@ const DashboardIndex = () => {
                             </li>
                         </ul>
                         <ul className="list-unstyled d-flex flex-column ml-3">
-                            <Link className="li d-flex align-items-center" to="/">
+                            <Link className="li d-flex align-items-center my-3" to="/">
                                 <div className="nav-box-sm" />
-                                {navOpen && <h5 className="mb-0 ml-2">Home</h5>}
+                                {navOpen && <h5 className="mb-0 ml-2 text-nowrap">Home</h5>}
                             </Link>
-                            <Link className="li d-flex align-items-center" to="/about">
+                            <Link className="li d-flex align-items-center my-3" to="/about">
                                 <div className="nav-box-sm" />
-                                {navOpen && <h5 className="mb-0 ml-2">About</h5>}
+                                {navOpen && <h5 className="mb-0 ml-2 text-nowrap">About</h5>}
                             </Link>
-                            <li>
+                            <li className="my-3">
                                 <div className="nav-box-sm" />
                             </li>
-                            <li>
+                            <li className="my-3">
                                 <div className="nav-box-sm" />
                             </li>
                         </ul>
