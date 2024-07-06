@@ -13,7 +13,7 @@ const DashboardIndex = () => {
     return (
         <div>
             <Row className="m-0">
-                <div className={`px-2 bg-light border-right vh-100 pt-4 nav-col ${navOpen ? 'open' : ''} nav-transition`}>
+                <div className={`px-2 bg-light border-right vh-100 pt-4 nav-col ${navOpen ? 'open' : ''} nav-transition overflow-hidden`}>
                     <nav>
                         <ul className="list-unstyled">
                             <li>
@@ -21,13 +21,6 @@ const DashboardIndex = () => {
                                     <div className="d-flex align-items-center">
                                         <div className="nav-box" />
                                         {navOpen && <h4 className={`ml-2 mb-0 text-nowrap`}>Blend-ed</h4>}
-                                    </div>
-                                    <div className="arrow-box ml-2 mr-n3" onClick={handleNavToggle}>
-                                        {navOpen ?
-                                            <ChevronLeft />
-                                            :
-                                            <ChevronRight />
-                                        }
                                     </div>
                                 </div>
                             </li>
@@ -61,6 +54,13 @@ const DashboardIndex = () => {
                             </li>
                         </ul>
                     </nav>
+                </div>
+                <div className="arrow-box ml-n2 mt-4" onClick={handleNavToggle}>
+                    {navOpen ?
+                        <ChevronLeft />
+                        :
+                        <ChevronRight />
+                    }
                 </div>
                 <Col>
                     <Outlet />
