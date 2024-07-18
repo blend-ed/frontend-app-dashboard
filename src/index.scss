@@ -1,3 +1,5 @@
+@import "./fonts.scss";
+
 @import "@edx/brand/paragon/fonts.scss";
 @import "@edx/brand/paragon/variables.scss";
 @import "@openedx/paragon/scss/core/core.scss";
@@ -7,57 +9,8 @@
 
 @import "~@edx/frontend-component-header/dist/index";
 
-.nav-box {
-    background-color: $gray-500;
-    border: 1px solid $gray-300;
-    height: 2.4rem;
-    width: 2.4rem;
-    border-radius: $border-radius;
-    padding: 1rem;
-}
-
-.nav-box-sm {
-    background-color: $gray-300;
-    border: 1px solid $gray-300;
-    height: 1.4rem;
-    width: 1.4rem;
-    min-width: 1.4rem;
-    border-radius: $border-radius;
-    padding: 0.5rem;
-}
-
-.img-box {
-    border: 1px solid $gray-300;
-    border-radius: $border-radius;
-    padding: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.arrow-box {
-    background-color: $white;
-    border: 1px solid $gray-300;
-    height: 1.4rem;
-    width: 1.4rem;
-    border-radius: $border-radius;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.nav-transition {
-    transition: width .5s ease;
-    /* Adjust time (0.5s) to control speed */
-}
-
-.nav-col {
-    width: 4rem;
-    /* Default width */
-}
-
-.nav-col.open {
-    width: 16rem;
-    /* Width when nav is open, adjust as needed */
-}
+@import "./variables.scss";
+@import "./utilities.scss";
+@import "./navbar.scss";
+@import "./icons.scss";
+@import "./typography.scss";

@@ -1,0 +1,64 @@
+.nav-box {
+    background-color: $gray-500;
+    border: 1px solid $gray-300;
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: $border-radius;
+    padding: 1rem;
+}
+
+.nav-box-sm {
+    background-color: $gray-300;
+    border: 1px solid $gray-300;
+    height: 1.4rem;
+    width: 1.4rem;
+    min-width: 1.4rem;
+    border-radius: $border-radius;
+    padding: 0.5rem;
+}
+
+.img-box {
+    border: 1px solid $gray-300;
+    border-radius: $border-radius;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-box {
+    background-color: $white;
+    border: 1px solid $gray-300;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav-transition {
+    transition: width .5s ease;
+    /* Adjust time (0.5s) to control speed */
+}
+
+.nav-col {
+    width: 80px;
+    min-height: 100vh;
+    height: 100% !important;
+}
+
+.nav-col.open {
+    width: 272px;
+    /* Width when nav is open, adjust as needed */
+}
+
+.submenu {
+    width: 264px;
+    margin-left: -1rem;
+    min-height: 100vh;
+    height: 100%;
+    padding: 1rem;
+    padding-left: 2rem;
+}
