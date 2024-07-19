@@ -110,3 +110,47 @@ $indexes: map-merge((0: 0,
         }
     }
 }
+
+.shadow-xs {
+    box-shadow: 0px 1px 2px 0px rgba(10, 13, 20, 0.03);
+}
+
+.shadow {
+    box-shadow: 0px 16px 32px -12px rgba(14, 18, 27, 0.1) !important;
+}
+
+.focus {
+    box-shadow: 0px 0px 0px 2px rgba(71, 108, 255, 0.24);
+}
+
+.focus-important {
+    box-shadow: 0px 0px 0px 2px rgba(153, 160, 174, 0.16);
+}
+
+.focus-error {
+    box-shadow: 0px 0px 0px 2px rgba(251, 55, 72, 0.24);
+}
+
+.btn-outline-neutral {
+    border: 1.5px solid $black;
+    box-shadow: 0px 1px 2px 0px rgba(27, 26, 29, 0.48);
+}
+
+.btn-outline-primary {
+    border: 1.5px solid $blue;
+    box-shadow: 0px 1px 2px 0px rgba(14, 18, 27, 0.24);
+}
+
+.btn-outline-error {
+    border: 1.5px solid $red;
+    box-shadow: 0px 1px 2px 0px rgba(233, 53, 68, 1);
+}
+
+.btn-outline-stroke {
+    border: 1.5px solid $gray-200;
+    box-shadow: 0px 1px 2px 0px rgba(27, 26, 29, 0.48);
+}
+
+.switch {
+    box-shadow: 0px 4px 2px 0px rgba(14, 18, 27, 0.3);
+}

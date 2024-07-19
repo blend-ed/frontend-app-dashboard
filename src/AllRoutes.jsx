@@ -5,16 +5,19 @@ import DashboardIndex from "./layouts/DashboardIndex";
 import Icons from "./components/Icons";
 import Submenu from "./components/Submenu";
 import Typography from "./components/Typography";
+import Utilities from "./components/Utilities";
 
 const AllRoutes = () => {
     return (
         <Routes>
             <Route element={<DashboardIndex />} >
+                <Route path="*" element={<Dashboard />} />
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/about" element={<ExamplePage />} />
                 <Route path="/icons" element={<Icons />} />
                 <Route path="/submenu" element={<Submenu />} />
                 <Route path="/typography" element={<Typography />} />
+                <Route path="/utilities" element={<Utilities />} />
             </Route>
         </Routes>
     )
