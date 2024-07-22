@@ -16,6 +16,14 @@ const Utilities = () => {
         { className: "btn-outline-stroke", title: "Stroke Button" },
     ];
 
+    const radiusProps = [
+        { className: "radius-0", title: "Radius 0" },
+        { className: "radius-2", title: "Radius 2" },
+        { className: "radius-4", title: "Radius 4" },
+        { className: "radius-6", title: "Radius 6" },
+        { className: "radius-8", title: "Radius 8" },
+        { className: "radius-full", title: "Radius Full" },
+    ];
 
     return (
         <div className="bg-gray-50 h-100 ml-n3 p-4" style={{ minHeight: "100vh" }}>
@@ -31,11 +39,22 @@ const Utilities = () => {
                             </Card>
                         ))}
                     </div>
-                    <div className="mx-4">
-                        <h3>Buttons</h3>
-                        {btnProps.map(({ className, title }, index) => (
-                            <Button key={index} variant="white" className={`${className} mb-2 mx-1`}>{title}</Button>
-                        ))}
+                    <div className="ml-4">
+                        <div className="mx-4 mb-4">
+                            <h3>Buttons</h3>
+                            {btnProps.map(({ className, title }, index) => (
+                                <Button key={index} variant="white" className={`${className} mb-2 mx-1`}>{title}</Button>
+                            ))}
+                        </div>
+                        <div className="mx-4">
+                            <h3>Radius</h3>
+                            {radiusProps.map(({ className, title }, index) => (
+                                <Card key={index} className={`${className} p-3 mb-4`}>
+                                    <h2>{title}</h2>
+                                    <p className="mb-0">Card content</p>
+                                </Card>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </Container>

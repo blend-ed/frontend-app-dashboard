@@ -154,3 +154,27 @@ $indexes: map-merge((0: 0,
 .switch {
     box-shadow: 0px 4px 2px 0px rgba(14, 18, 27, 0.3);
 }
+
+.radius-0 {
+    border-radius: 0 !important;
+}
+
+.radius-2 {
+    border-radius: 2px !important;
+}
+
+.radius-4 {
+    border-radius: 4px !important;
+}
+
+.radius-6 {
+    border-radius: 6px !important;
+}
+
+.radius-8 {
+    border-radius: 8px !important;
+}
+
+.radius-full {
+    border-radius: 999px !important;
+}
