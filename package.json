@@ -34,9 +34,9 @@
     "url": "https://github.com/openedx/frontend-app-dashboard/issues"
   },
   "dependencies": {
-    "@edx/brand": "npm:@openedx/brand-openedx@^1.2.2",
+    "@edx/brand": "git+https://github.com/blend-ed/blendx-brand.git#blendx-v1",
     "@edx/frontend-component-header": "git+https://github.com/blend-ed/frontend-component-vertical-navbar.git",
-    "@blend-ed/frontend-component-vertical-navbar": "git+https://github.com/blend-ed/frontend-component-vertical-navbar.git",
+    "@blend-ed/frontend-component-vertical-navbar": "git+https://github.com/blend-ed/frontend-component-vertical-navbar.git#blendx-v1",
     "@edx/frontend-platform": "7.1.4",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-brands-svg-icons": "5.15.4",
