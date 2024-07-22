@@ -1,8 +1,8 @@
-@import "./fonts.scss";
+@import "./fonts";
 
 @import "@edx/brand/paragon/fonts.scss";
 @import "@edx/brand/paragon/variables.scss";
-@import "./variables.scss";
+@import "./variables";
 @import "@openedx/paragon/scss/core/core.scss";
 @import "@edx/brand/paragon/overrides.scss";
 
@@ -10,7 +10,7 @@
 
 @import "~@edx/frontend-component-header/dist/index";
 
-@import "./utilities.scss";
-@import "./navbar.scss";
-@import "./icons.scss";
-@import "./typography.scss";
+@import "./utilities";
+@import "./navbar";
+@import "./icons";
+@import "./typography";
