@@ -6,6 +6,7 @@ import Icons from "./components/Icons";
 import Submenu from "./components/Submenu";
 import Typography from "./components/Typography";
 import Utilities from "./components/Utilities";
+import Modals from "./components/Modals";
 
 const AllRoutes = () => {
     return (
@@ -18,6 +19,7 @@ const AllRoutes = () => {
                 <Route path="/submenu" element={<Submenu />} />
                 <Route path="/typography" element={<Typography />} />
                 <Route path="/utilities" element={<Utilities />} />
+                <Route path="/modals" element={<Modals />} />
             </Route>
         </Routes>
     )
