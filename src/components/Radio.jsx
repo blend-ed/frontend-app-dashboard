@@ -1,4 +1,4 @@
-import Radio from "../blendx-ui/src/Radio";
+import Radio from "../../../blendx-ui/src/Radio";
 
 const Radios = () => {
     return (

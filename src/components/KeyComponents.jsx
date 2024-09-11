@@ -1,4 +1,4 @@
-import { ContentCard, ContentLabel, Hint, Label, PasswordStrength, Icon, Legend } from '../blendx-ui/src/KeyComponents'
+import { ContentCard, ContentLabel, Hint, Label, PasswordStrength, Icon, Legend } from '../../../blendx-ui/src/KeyComponents'
 
 const KeyComponents = () => {
     return (

@@ -1,4 +1,4 @@
-import CheckBox from "../blendx-ui/src/CheckBox";
+import CheckBox from "../../../blendx-ui/src/CheckBox";
 
 const CheckBoxes = () => {
     return (

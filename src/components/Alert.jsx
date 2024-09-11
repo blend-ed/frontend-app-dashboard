@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Container } from '@openedx/paragon';
-import Alert from '../blendx-ui/src/Alert';
-import PageBanner from '../blendx-ui/src/PageBanner';
+import Alert from '../../../blendx-ui/src/Alert';
+import PageBanner from '../../../blendx-ui/src/PageBanner';
 
 const BLAlert = () => {
     const [alerts, setAlerts] = useState([

@@ -1,6 +1,6 @@
 import React from 'react';
-import Filter from '../blendx-ui/src/Filter';
-import Button, { ButtonGroup, IconButton } from '../blendx-ui/src/Button';
+import Filter from '../../../blendx-ui/src/Filter';
+import Button, { ButtonGroup, IconButton } from '../../../blendx-ui/src/Button';
 
 const Filters = () => {
     return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DatePicker, { RangePicker } from '../blendx-ui/src/DatePicker';
+import DatePicker, { RangePicker } from '../../../blendx-ui/src/DatePicker';
 
 const DatePickers = () => {
 

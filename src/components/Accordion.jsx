@@ -1,5 +1,5 @@
 import { Container } from "@openedx/paragon";
-import Accordion from "../blendx-ui/src/Accordion";
+import Accordion from "../../../blendx-ui/src/Accordion";
 
 const BLAccordion = () => {
     return (

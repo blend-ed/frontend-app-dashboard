@@ -1,5 +1,5 @@
 import { Card, Container } from "@openedx/paragon"
-import ActivityFeed from "../blendx-ui/src/ActivityFeed"
+import ActivityFeed from "../../../blendx-ui/src/ActivityFeed"
 const Activity = () => {
 
     const activityData = [

@@ -1,5 +1,5 @@
 import { Container } from "@openedx/paragon"
-import Badge from '../blendx-ui/src/Badge'
+import Badge from '../../../blendx-ui/src/Badge'
 
 const Badges = () => {
     const badgeConfig = [

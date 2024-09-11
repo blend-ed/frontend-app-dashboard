@@ -1,9 +1,9 @@
 import { Container } from "@openedx/paragon";
-import Button from '../blendx-ui/src/Button';
+import Button from '../../../blendx-ui/src/Button';
 import { useState } from "react";
-import { SectionHeader } from "../blendx-ui/src/PageHeader";
-import Card from "../blendx-ui/src/Card";
-import Image from "../blendx-ui/src/Image";
+import { SectionHeader } from "../../../blendx-ui/src/PageHeader";
+import Card from "../../../blendx-ui/src/Card";
+import Image from "../../../blendx-ui/src/Image";
 
 const Dashboard = () => {
 

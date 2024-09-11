@@ -1,6 +1,6 @@
 // import Header from "@blend-ed/frontend-component-vertical-navbar";
-import SideNavbar, { SideNavbarContainer } from "../blendx-ui/src/SideNavbar";
-import PageHeader from "../blendx-ui/src/PageHeader";
+import SideNavbar, { SideNavbarContainer } from "../../../blendx-ui/src/SideNavbar";
+import PageHeader from "../../../blendx-ui/src/PageHeader";
 import { Outlet } from "react-router-dom";
 import { getConfig } from '@edx/frontend-platform';
 

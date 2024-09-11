@@ -1,5 +1,5 @@
 import { Container } from "@openedx/paragon"
-import Button, { ButtonGroup, IconButton } from "../blendx-ui/src/Button"
+import Button, { ButtonGroup, IconButton } from "../../../blendx-ui/src/Button"
 
 const Buttons = () => {
     const buttonConfigs = [
