@@ -1,8 +1,26 @@
 @import "@edx/brand/paragon/fonts.scss";
 @import "@edx/brand/paragon/variables.scss";
-@import "@openedx/paragon/scss/core/core.scss";
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+main {
+    padding: 0 2rem;
+}
+
+$shadow-xs: 0px 1px 2px 0px rgba(10, 13, 20, 0.03);
+
+.vw-100 {
+    width: 100vw;
+}
+
+.vw-75 {
+    width: 75vw;
+}
+
+@import "@blend-ed/blendx-ui/scss/core/core.scss";
 @import "@edx/brand/paragon/overrides.scss";
 
-@import './example/index.scss';
-
-@import "~@edx/frontend-component-header/dist/index";
+@import "assets/scss";
