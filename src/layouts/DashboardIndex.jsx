@@ -1,72 +1,48 @@
-// import Header from "@blend-ed/frontend-component-vertical-navbar";
-import SideNavbar, { SideNavbarContainer } from "../../../blendx-ui/src/SideNavbar";
-import PageHeader from "../../../blendx-ui/src/PageHeader";
-import { Outlet } from "react-router-dom";
-import { getConfig } from '@edx/frontend-platform';
+import React, { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import { PageHeader, SideNavbar, SideNavbarContainer } from "@blend-ed/blendx-ui";
+import { DashboardFooter, DashboardMenu, ProfileMenu } from "../routes/DashboardMenu";
 
 const DashboardIndex = () => {
+    const location = useLocation();
+    const [title, setTitle] = useState("");
 
     const user = {
         name: 'John Doe',
         email: 'john@doe.com',
         role: 'Admin',
-        avatar: 'https://i.postimg.cc/7Z8vQ0Y9/Rectangle-2.png'
-    }
+        image: 'https://i.postimg.cc/7Z8vQ0Y9/Rectangle-2.png'
+    };
 
-    const StudentDashboardMenu = [
-
-        {
-            icon: 'home-2',
-            text: 'Home',
-            href: '/'
-        },
-        {
-            icon: 'book',
-            text: 'Courses',
-            href: '/buttons'
-        },
-        {
-            icon: 'settings',
-            text: 'Settings',
-            children: [
-                {
-                    text: 'Key Components',
-                    href: '/key'
-                },
-                {
-                    text: 'Icons',
-                    href: '/icons'
-                }
-            ]
+    useEffect(() => {
+        const currentMenuItem = DashboardMenu.find(item => item.href === location.pathname);
+        if (currentMenuItem) {
+            setTitle(currentMenuItem.text);
         }
-    ]
-
-    const StudentDashboardFooter = [
-        {
-            icon: 'settings',
-            text: 'Settings',
-            href: '/settings'
-        },
-        {
-            icon: 'logout-box-r',
-            text: 'Log Out',
-            onClick: () => {
-                console.log('Logging out')
-            }
-        }
-    ]
+    }, [location.pathname]);
 
     return (
-        <div>
-            <SideNavbarContainer>
-                <SideNavbar logo={'https://i.postimg.cc/tTr1MbMr/logo-1-1.png'} logoTrademark={'https://i.postimg.cc/SNRLqTL2/logo-1.png'} collapsed={true} user={user} dashboardMenu={StudentDashboardMenu} dashboardFooter={StudentDashboardFooter} />
-                <div className="content">
-                    <PageHeader title="Dashboard" streakCount={3} mailCount={5} notificationCount={10} />
-                    <Outlet />
-                </div>
-            </SideNavbarContainer>
-        </div >
-    )
-}
+        <SideNavbarContainer>
+            <SideNavbar
+                logo={'https://i.postimg.cc/tTr1MbMr/logo-1-1.png'}
+                logoTrademark={'https://i.postimg.cc/SNRLqTL2/logo-1.png'}
+                collapsed={false}
+                user={user}
+                dashboardMenu={DashboardMenu}
+                dashboardFooter={DashboardFooter}
+                profileMenu={ProfileMenu}
+            />
+            <div className="content">
+                <PageHeader
+                    title={title}
+                    streakCount={3}
+                    mailCount={5}
+                    notificationCount={10}
+                />
+                <Outlet />
+            </div>
+        </SideNavbarContainer>
+    );
+};
 
 export default DashboardIndex;
