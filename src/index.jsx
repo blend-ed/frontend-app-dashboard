@@ -10,14 +10,18 @@ import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 import ReactDOM from 'react-dom';
 
 import messages from './i18n';
+import { Provider } from 'react-redux';
 
 import AllRoutes from './AllRoutes';
 import './index.scss';
+import store from './store';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
     <AppProvider>
-      <AllRoutes />
+      <Provider store={store}>
+        <AllRoutes />
+      </Provider>
     </AppProvider>,
     document.getElementById('root'),
   );
