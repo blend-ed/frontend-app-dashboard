@@ -1,23 +1,20 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from '../../redux/reducers/counterReducer';
-import { fetchHomeData } from '../../redux/actions/homeActions';
+import { fetchPostData } from '../../redux/actions/postActions';
 
 const Home = () => {
-    const count = useSelector((state) => state.counter);
     const dispatch = useDispatch();
 
-    const homeData = useSelector((state) => state.home.data);
-    const loading = useSelector((state) => state.home.loading);
-    const error = useSelector((state) => state.home.error);
+    const { postData, loading, error } = useSelector((state) => ({
+        postData: state.post.data,
+        loading: state.post.loading,
+        error: state.post.error
+    }));
+
 
     useEffect(() => {
-        dispatch(fetchHomeData());
+        dispatch(fetchPostData());
     }, [dispatch]);
-
-    useEffect(() => {
-        console.log(homeData);
-    }, [homeData]);
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
@@ -34,10 +31,16 @@ const Home = () => {
                 <div className="col-md-12">
                     <p className="text-center">This is a simple example of a student dashboard. It is built using React, React Router, and the Material Kit React template.</p>
                 </div>
-                <div className="col-md-12">
-                    <h5>redux counter:{count}</h5>
-                    <button onClick={() => dispatch(increment())}>Increment</button>
-                    <button onClick={() => dispatch(decrement())}>Decrement</button>
+                <div className="col-md-12 d-flex flex-wrap">
+                    {postData?.map((post, index) => (
+                        <div key={index} className="card m-2" style={{ width: "250px" }}>
+                            <div className="card-body">
+                                <img src={post.thumbnail} alt="" />
+                                <h6 className="card-title">{post.title}</h6>
+                                <p className="card-text">{post.body}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
             </div>
