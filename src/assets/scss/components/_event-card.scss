@@ -1,0 +1,64 @@
+.event-card {
+  border: 1px solid map-get($neutral-color-levels, "stroke-subtle");
+  border-radius: $radius-4;
+  color: map-get($neutral-color-levels, "text-strong");
+  overflow: hidden;
+
+  @each $color, $value in $theme-colors {
+    &.event-#{$color}>.event-card-header {
+      background-color: theme-color($color, "subtle");
+    }
+
+    &.event-gray>.event-card-header {
+      background-color: map-get($neutral-color-levels, "bg-subtle");
+    }
+  }
+
+  .event-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem;
+    font-weight: $font-weight-label;
+    border-bottom: 1px solid map-get($neutral-color-levels, "stroke-subtle");
+    max-height: 3rem;
+
+    .event-card-date {
+      font-size: $font-size-md;
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+    }
+
+    .event-card-time {
+      font-size: $font-size-sm;
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+    }
+
+  }
+
+  .event-card-body {
+    padding: .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    font-weight: $font-weight-label;
+
+    .event-card-title {
+      font-size: $font-size-md;
+    }
+
+    .event-card-link {
+      font-size: $font-size-sm;
+      color: inherit;
+      font-weight: $font-weight-regular;
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      height: 1.25rem;
+      text-decoration: none;
+    }
+  }
+}

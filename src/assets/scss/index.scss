@@ -1,1 +1,7 @@
-@import 'components/calendar'
+// Pages
+@import 'pages/calendar';
+@import 'pages/home';
+
+// Components
+@import 'components/event-card';
+@import 'components/recent-activity-card';
