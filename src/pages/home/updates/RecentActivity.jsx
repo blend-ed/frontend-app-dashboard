@@ -1,4 +1,4 @@
-import { Button } from "@blend-ed/blendx-ui";
+import { Link } from "react-router-dom";
 import RecentActivityCard from "../../../components/RecentActivityCard";
 
 const RecentActivity = () => {
@@ -6,7 +6,12 @@ const RecentActivity = () => {
     <div className="recent-activity-container">
       <div className="recent-activity__header">
         <div className="recent-activity__title">Recent Activity</div>
-        <Button size="xs" variant="ghost-gray">See my feed</Button>
+        <Link
+          to="#"
+          className="recent-activity__link"
+        >
+          See my feed
+        </Link>
       </div>
       <RecentActivityCard image={"https://via.placeholder.com/150"} title="Maths Quiz" type="course" progressPercentage={50} />
     </div>

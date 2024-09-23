@@ -1,4 +1,5 @@
 import ProgressCard from "./ProgressCard";
+import RecommendedCourses from "./recommended-courses";
 import Updates from "./updates";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <main>
             <ProgressCard />
             <Updates />
+            <RecommendedCourses />
         </main>
     )
 }

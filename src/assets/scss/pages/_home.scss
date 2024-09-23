@@ -31,6 +31,11 @@
   color: map-get($neutral-color-levels, "text-strong");
 }
 
+@mixin home-link {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-label;
+  color: map-get($neutral-color-levels, "text-default");
+}
 
 .progress-card-container {
   margin-top: .5rem;
@@ -104,6 +109,10 @@
         .upcoming-events__title {
           @include home-title-2;
         }
+
+        .upcoming-events__link {
+          @include home-link;
+        }
       }
     }
 
@@ -116,7 +125,34 @@
         .recent-activity__title {
           @include home-title-2;
         }
+
+        .recent-activity__link {
+          @include home-link;
+        }
       }
     }
+  }
+}
+
+.recommended-courses-container {
+  margin-top: 1.5rem;
+  @include home-container;
+
+  .recommended-courses__header {
+    @include home-header;
+
+    .recommended-courses__title {
+      @include home-title;
+    }
+
+    .recommended-courses__link {
+      @include home-link;
+    }
+  }
+
+  .recommended-courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
   }
 }
