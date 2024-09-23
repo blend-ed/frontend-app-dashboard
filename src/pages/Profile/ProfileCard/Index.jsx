@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Badge } from "@blend-ed/blendx-ui"
-import Avatar from "../../../blendx-ui/src/Avatar";
+import Avatar from "../../../../../blendx-ui/src/Avatar";
 import profileBackgroundBanner from './profile-banner.jpeg'
 
 const ProfileHeaderLarge = ({ name, username, backgroundSrc }) => {
