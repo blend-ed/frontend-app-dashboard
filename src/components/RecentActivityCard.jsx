@@ -1,4 +1,6 @@
-import { Badge, Button, Image, ProgressBar } from "@blend-ed/blendx-ui"
+import { Badge, Image } from "@blend-ed/blendx-ui"
+import ProgressBar from "../blendx-ui/src/ProgressBar"
+import Button from "../blendx-ui/src/Button";
 
 const RecentActivityCard = ({ image, title, type, progressPercentage }) => {
   return (
@@ -8,9 +10,18 @@ const RecentActivityCard = ({ image, title, type, progressPercentage }) => {
         <div className="recent-activity-card__head">
           <Badge variant="yellow" size="sm" className="recent-activity-card__badge">{type}</Badge>
           <div className="recent-activity-card__title">{title}</div>
-          <ProgressBar progress={progressPercentage} size="sm" />
+          <ProgressBar progress={progressPercentage} size="sm" type="inline" />
         </div>
-        <Button size="xs" variant="outline-gray" iconBefore="play">Resume</Button>
+        <Button
+          size="xs"
+          variant="outline-gray"
+          iconBefore="play"
+          iconType="fill"
+          border
+          className="recent-activity-card__button"
+        >
+          Resume
+        </Button>
       </div>
     </div>
   );

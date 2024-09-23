@@ -39,5 +39,10 @@
         color: map-get($neutral-color-levels, "text-strong");
       }
     }
+
+    .recent-activity-card__button {
+      align-self: flex-start;
+      font-weight: $font-weight-label;
+    }
   }
 }
