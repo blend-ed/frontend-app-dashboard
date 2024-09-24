@@ -1,6 +1,4 @@
-import { Badge, Image } from "@blend-ed/blendx-ui"
-import ProgressBar from "../blendx-ui/src/ProgressBar"
-import Button from "../blendx-ui/src/Button";
+import { Badge, Image, ProgressBar, Button } from "@blend-ed/blendx-ui"
 
 const RecentActivityCard = ({ image, title, type, progressPercentage }) => {
   return (

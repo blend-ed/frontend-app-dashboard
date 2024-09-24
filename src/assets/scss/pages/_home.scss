@@ -48,38 +48,6 @@
       @include home-title;
     }
   }
-
-  .progress-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: map-get($neutral-color-levels, "bg-minimal");
-    border-radius: $radius-4;
-    padding: 1.75rem 3.625rem;
-
-    .progress-card__item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .progress-card__item-value {
-        color: map-get($neutral-color-levels, "text-strong");
-        line-height: 1;
-      }
-
-      .progress-card__item-title {
-        font-size: $font-size-md;
-        font-weight: $font-weight-label;
-        color: map-get($neutral-color-levels, "text-strong");
-      }
-    }
-
-    .progress-card__line {
-      width: 1px;
-      height: 5.25rem;
-      background-color: map-get($neutral-color-levels, "stroke-subtle");
-    }
-  }
 }
 
 .updates-container {

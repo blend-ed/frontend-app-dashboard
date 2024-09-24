@@ -1,0 +1,33 @@
+@mixin profile-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0rem 2rem 0rem;
+}
+
+@mixin profile-items-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.profile-footer-section__container {
+    margin-top: 2rem;
+
+    .profile-footer-section__content {
+        margin-top: 1rem;
+
+        .profile-footer-section__certificates-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 350px);
+            gap: 1rem;
+
+            .profile-footer-section__certificate-image {
+                max-width: 22rem;
+                object-fit: fill;
+                border-radius: $radius-4;
+                border: solid 1px map-get($neutral-color-levels, "stroke-default");
+            }
+        }
+
+    }
+}
