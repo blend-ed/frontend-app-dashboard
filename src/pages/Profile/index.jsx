@@ -1,10 +1,14 @@
 import React from 'react'
-import ProfileHeaderLarge from './ProfileCard/Index';
+import ProfileCardLarge from '../../components/ProfileCardLarge';
+import ProgressCard from '../../components/ProgressCard';
+import ProfileFooterSection from './certificates-section';
 
 function Profile() {
     return (
         <main>
-            <ProfileHeaderLarge name="Abdul Ahad" username="abdulahad123" backgroundSrc={""} />
+            <ProfileCardLarge name="Abdul Ahad" username="abdulahad123" backgroundSrc={""} />
+            <ProgressCard />
+            <ProfileFooterSection />
         </main>
     )
 }

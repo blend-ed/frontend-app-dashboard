@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { SideNavbar, SideNavbarContainer } from "@blend-ed/blendx-ui";
-import { PageHeader } from "../blendx-ui/src";
+import { SideNavbar, SideNavbarContainer, PageHeader } from "@blend-ed/blendx-ui";
 import { DashboardFooter, DashboardMenu, ProfileMenu } from "../routes/DashboardMenu";
 import { getAuthenticatedUser } from "@edx/frontend-platform/auth";
 

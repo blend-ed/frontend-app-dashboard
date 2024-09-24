@@ -1,8 +1,12 @@
 // Pages
 @import 'pages/calendar';
 @import 'pages/home';
+@import 'pages/profile';
+@import 'pages/settings';
 
 // Components
 @import 'components/event-card';
 @import 'components/recent-activity-card';
 @import 'components/course-card';
+@import 'components/progress-card';
+@import 'components/profile-card-large';

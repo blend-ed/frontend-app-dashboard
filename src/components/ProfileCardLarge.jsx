@@ -1,13 +1,13 @@
 import React from 'react';
-import { Button, Badge } from "@blend-ed/blendx-ui"
-import Avatar from "../../../blendx-ui/src/Avatar"
-import profileBackgroundBanner from './profile-banner.jpeg'
+import { Badge, Button } from "@blend-ed/blendx-ui"
 
-const ProfileHeaderLarge = ({ name, username, backgroundSrc }) => {
+import Avatar from "../blendx-ui/src/Avatar"
+import profileBackgroundBanner from '../assets/images/profile-banner.jpeg'
+
+const ProfileCardLarge = ({ name, username, backgroundSrc, state = "" }) => {
     return (
         <div className="profile-header-large__container">
             {/* Background Image */}
-
             <img
                 src={backgroundSrc || profileBackgroundBanner}
                 alt="Profile background banner"
@@ -40,7 +40,9 @@ const ProfileHeaderLarge = ({ name, username, backgroundSrc }) => {
                     </div>
                 </div>
                 <div className="profile-header-large__right-section">
-                    <Button
+
+                    {/* showing two buttons this is in the profile page */}
+                    {state == "" && <><Button
                         size="md"
                         variant="outline-gray"
                         iconBefore="settings-5"
@@ -49,14 +51,24 @@ const ProfileHeaderLarge = ({ name, username, backgroundSrc }) => {
                         Account Settings
                     </Button>
 
-                    <Button
+                        <Button
+                            size="md"
+                            variant="primary"
+                            iconBefore="edit"
+                            iconType="fill"
+                        >
+                            Edit Profile
+                        </Button></>}
+
+                    {/* showing one button this is in the settings page */}
+                    {state == "edit-profile" && <Button
                         size="md"
                         variant="primary"
                         iconBefore="edit"
                         iconType="fill"
                     >
                         Edit Profile
-                    </Button>
+                    </Button>}
                 </div>
 
             </div>
@@ -64,4 +76,4 @@ const ProfileHeaderLarge = ({ name, username, backgroundSrc }) => {
     );
 };
 
-export default ProfileHeaderLarge;
+export default ProfileCardLarge;

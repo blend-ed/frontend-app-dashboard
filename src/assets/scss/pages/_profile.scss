@@ -1,7 +1,7 @@
 @mixin profile-container {
     display: flex;
     flex-direction: column;
-    margin: 0rem 2rem;
+    margin: 0.5rem 0rem 2rem 0rem;
 }
 
 @mixin profile-items-container {
@@ -10,71 +10,24 @@
 }
 
 
-.profile-header-large__container {
-    @include profile-container;
+.profile-footer-section__container {
+    margin-top: 2rem;
 
-    .profile-header-large__banner-img {
-        height: 172px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: $radius-6;
-    }
+    .profile-footer-section__content {
+        margin-top: 1rem;
 
+        .profile-footer-section__certificates-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 350px);
+            gap: 1rem;
 
-
-    .profile-header-large__info-wrapper {
-        @include profile-items-container;
-        justify-content: space-between;
-        margin-top: -5rem;
-
-        .profile-header-large__left-section {
-            @include profile-items-container;
-            align-items: end;
-
-            .profile-header-large__avatar-wrapper {
-                margin: 0rem 1rem 0rem 2.5rem;
-
-                .avatar-wrapper-huge {
-                    width: 10rem !important;
-                    height: 10rem !important;
-                    font-size: 3rem;
-                    line-height: 2rem;
-                }
-
-                .pgn__avatar.avatar-wrapper-border-huge {
-                    margin: 0;
-                }
-
-                .profile-header-large__avatar {
-                    border: 4px solid white;
-                }
-            }
-
-            .profile-header-large__info {
-                .profile-header-large__name {
-                    color: map-get($neutral-color-levels, "text-strong");
-                    font-size: $font-size-lg;
-                    font-weight: $font-weight-label;
-
-                }
-
-                .profile-header-large__username {
-                    color: map-get($neutral-color-levels, "text-default");
-                    font-size: $font-size-sm;
-                    font-weight: $font-weight-label;
-                }
-            }
-
-        }
-
-        .profile-header-large__right-section {
-            @include profile-items-container;
-            margin-bottom: 1rem;
-            align-items: end;
-
-            >* {
-                margin-left: 1rem;
+            .profile-footer-section__certificate-image {
+                max-width: 22rem;
+                object-fit: fill;
+                border-radius: $radius-4;
+                border: solid 1px map-get($neutral-color-levels, "stroke-default");
             }
         }
+
     }
 }
