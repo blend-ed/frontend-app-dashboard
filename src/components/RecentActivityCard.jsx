@@ -1,6 +1,9 @@
 import { Badge, Image, ProgressBar, Button } from "@blend-ed/blendx-ui"
+import { useNavigate } from "react-router-dom"
 
-const RecentActivityCard = ({ image, title, type, progressPercentage }) => {
+const RecentActivityCard = ({ image, title, type, progressPercentage, link }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="recent-activity-card">
       <Image src={image} alt={title} className="recent-activity-card__image" />
@@ -17,6 +20,7 @@ const RecentActivityCard = ({ image, title, type, progressPercentage }) => {
           iconType="fill"
           border
           className="recent-activity-card__button"
+          onClick={() => navigate(link)}
         >
           Resume
         </Button>
