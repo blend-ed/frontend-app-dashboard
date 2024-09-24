@@ -1,12 +1,13 @@
-import { Icon } from '../blendx-ui/src';
-import { IconButton } from '@blend-ed/blendx-ui';
 import { Badge, Image } from '@blend-ed/blendx-ui';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import propTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
+import { Icon } from '../blendx-ui/src';
 
 const CourseCard = ({ title, link, image, estimatedTime, price }) => {
+
+  const navigate = useNavigate();
   return (
-    <div className="course-card">
+    <div className="course-card" onClick={() => navigate(link)}>
       <Image src={image} alt={title} className="course-card__image" />
       <div className="course-card__body">
         <Badge variant="light-yellow" className="course-card__badge">
@@ -23,13 +24,25 @@ const CourseCard = ({ title, link, image, estimatedTime, price }) => {
         </div>
         <div className="course-card__footer">
           <div className="course-card__price">
-            {'$' + price}
+            {price === 0 ? 'Free' : `$${price}`}
           </div>
           <Icon icon="share-forward" variant="ghost-gray" type="line" size="sm" className="course-card__share" onClick={() => alert('Share')} />
         </div>
       </div>
     </div>
   );
+}
+
+CourseCard.propTypes = {
+  title: propTypes.string.isRequired,
+  link: propTypes.string.isRequired,
+  image: propTypes.string.isRequired,
+  estimatedTime: propTypes.string.isRequired,
+  price: propTypes.number,
+}
+
+CourseCard.defaultProps = {
+  price: 0,
 }
 
 export default CourseCard;

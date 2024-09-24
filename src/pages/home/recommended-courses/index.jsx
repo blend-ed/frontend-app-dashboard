@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CourseCard from '../../../components/CourseCard';
-import { Button } from '../../../blendx-ui/src';
 
 const RecommendedCourses = () => {
   return (
@@ -32,6 +31,7 @@ const RecommendedCourses = () => {
           estimatedTime="2 hours"
           link="/courses/ui-ux-design-intro"
           image="https://cdn.pixabay.com/photo/2021/02/01/15/29/social-media-marketing-5971028_1280.jpg"
+          price={0}
         />
         <CourseCard
           title="Introduction to Digital Marketing"
