@@ -1,7 +1,6 @@
-import { Badge, Image } from '@blend-ed/blendx-ui';
+import { Badge, Icon, Image } from '@blend-ed/blendx-ui';
 import propTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import { Icon } from '../blendx-ui/src';
 
 const CourseCard = ({ title, link, image, estimatedTime, price }) => {
 

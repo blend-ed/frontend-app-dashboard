@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Icon, Button } from '@blend-ed/blendx-ui';
 import propTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import { Badge } from '../blendx-ui/src';
+import { Badge } from '@blend-ed/blendx-ui';
 
 const ProgramCard = ({ title, description, estimatedTime, link, image, price, courseCount }) => {
   const navigate = useNavigate();

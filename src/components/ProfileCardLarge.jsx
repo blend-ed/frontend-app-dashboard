@@ -1,8 +1,6 @@
 import React from 'react';
-import { Badge, Button } from "@blend-ed/blendx-ui"
-
-import Avatar from "../blendx-ui/src/Avatar"
-import profileBackgroundBanner from '../assets/images/profile-banner.jpeg'
+import { Avatar, Badge, Button } from "@blend-ed/blendx-ui";
+import profileBackgroundBanner from '../assets/images/profile-banner.jpeg';
 
 const ProfileCardLarge = ({ name, username, backgroundSrc, state = "" }) => {
     return (
