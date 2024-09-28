@@ -1,5 +1,6 @@
 import ProgressCard from "../../components/ProgressCard";
 import RecommendedCourses from "./recommended-courses";
+import RecommendedPrograms from "./recommended-programs";
 import { Button } from "@blend-ed/blendx-ui";
 import Updates from "./updates";
 
@@ -15,6 +16,7 @@ const Home = () => {
             </div>
             <Updates />
             <RecommendedCourses />
+            <RecommendedPrograms />
         </main>
     )
 }

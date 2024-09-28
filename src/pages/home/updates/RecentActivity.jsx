@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import RecentActivityCard from "../../../components/RecentActivityCard";
 
+const RecentActivityData = {
+  title: "Maths Quiz",
+  type: "course",
+  progressPercentage: 50,
+  image: "https://via.placeholder.com/150",
+  link: "#",
+};
+
 const RecentActivity = () => {
   return (
     <div className="recent-activity-container">
@@ -13,7 +21,13 @@ const RecentActivity = () => {
           See my feed
         </Link>
       </div>
-      <RecentActivityCard image={"https://via.placeholder.com/150"} title="Maths Quiz" type="course" progressPercentage={50} />
+      <RecentActivityCard
+        title={RecentActivityData.title}
+        type={RecentActivityData.type}
+        progressPercentage={RecentActivityData.progressPercentage}
+        image={RecentActivityData.image}
+        link={RecentActivityData.link}
+      />
     </div>
   );
 }

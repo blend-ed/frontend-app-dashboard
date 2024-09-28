@@ -1,0 +1,54 @@
+.program-card {
+  border: 1px solid map-get($neutral-color-levels, "stroke-subtle");
+  border-radius: $radius-6;
+  overflow: hidden;
+  display: flex;
+  padding: .75rem;
+
+  .program-card__image {
+    width: 18.75rem;
+    min-width: 18.75rem;
+    height: 13.25rem;
+    object-fit: cover;
+    border-radius: $radius-4;
+  }
+
+  .program-card__content {
+    padding: .75rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .program-card__body {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+
+      .program-card__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-label;
+        color: map-get($neutral-color-levels, "text-strong");
+      }
+
+      .program-card__description {
+        font-size: $font-size-sm;
+        color: map-get($neutral-color-levels, "text-default");
+      }
+
+      .program-card__badges {
+        display: flex;
+        gap: 1rem;
+
+        .program-card__badge {
+          font-weight: $font-weight-label;
+          color: map-get($neutral-color-levels, "text-strong");
+        }
+      }
+    }
+
+  }
+}
