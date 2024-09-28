@@ -26,14 +26,4 @@
         display: grid;
         gap: 1rem;
     }
-
-    .inlinedropdown-item-icon {
-        font-size: .875rem !important;
-    }
-
-    .inlinedropdown-item.inlinedropdown-item-selected {
-        .icon-container.inlinedropdown-item-icon {
-            font-size: .875rem !important;
-        }
-    }
 }
