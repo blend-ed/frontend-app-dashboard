@@ -1,0 +1,39 @@
+.course-body {
+    display: grid;
+    grid-template-rows: 1fr;
+
+    .course-body-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        .inlinedropdown-body.inlinedropdown-border {
+            min-width: 7rem;
+        }
+    }
+
+    .course-body-content {
+        .course-cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+            gap: 1rem;
+        }
+    }
+
+    .program-cards-container {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .inlinedropdown-item-icon {
+        font-size: .875rem !important;
+    }
+
+    .inlinedropdown-item.inlinedropdown-item-selected {
+        .icon-container.inlinedropdown-item-icon {
+            font-size: .875rem !important;
+        }
+    }
+}

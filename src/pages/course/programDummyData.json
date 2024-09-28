@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Full Stack Web Development",
+    "description": "Master the MERN stack to build dynamic web applications. Learn frontend and backend technologies, database management, and deployment projects and collaborative coding exercises.",
+    "estimatedTime": "6 months",
+    "link": "/programs/full-stack-web-dev",
+    "image": "https://picsum.photos/seed/fdga/500/500",
+    "price": 10,
+    "courseCount": 10
+  },
+  {
+    "id": 2,
+    "title": "Data Science",
+    "description": "Dive into the world of data analysis and machine learning. Learn statistical methods, data visualization, predictive modeling, and big data technologies. Apply your skills to solve .",
+    "estimatedTime": "6 months",
+    "link": "/programs/data-science",
+    "image": "https://picsum.photos/seed/qwer/500/500",
+    "price": 10
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design",
+    "description": "Create intuitive and visually appealing digital experiences. Master user research, wireframing, prototyping, and usability testing. Learn industry-standard design tools",
+    "estimatedTime": "6 months",
+    "link": "/programs/ui-ux-design",
+    "image": "https://picsum.photos/seed/fdgh/500/500",
+    "price": 0
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing",
+    "description": "Develop comprehensive digital marketing strategies. Learn SEO, social media marketing, content creation, email campaigns, and analytics. Understand consumer behavior and le",
+    "estimatedTime": "6 months",
+    "link": "/programs/digital-marketing",
+    "image": "https://picsum.photos/seed/kgftyuyt/500/500"
+  },
+  {
+    "id": 5,
+    "title": "Zybersecurity",
+    "description": "Learn the fundamentals of cybersecurity and how to protect systems. Understand threat analysis, risk management, and security protocols.",
+    "estimatedTime": "5 months",
+    "link": "/programs/cybersecurity",
+    "image": "https://picsum.photos/seed/vmbnjdgh/500/500",
+    "price": 30
+  },
+  {
+    "id": 7,
+    "title": "Aachine Learning",
+    "description": "Explore the basics of machine learning and its applications. Learn about algorithms, data preprocessing, and model evaluation.",
+    "estimatedTime": "4 months",
+    "link": "/programs/machine-learning",
+    "image": "https://picsum.photos/seed/eqrfad/500/500",
+    "price": 50
+  }
+]
