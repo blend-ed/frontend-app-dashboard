@@ -1,8 +1,5 @@
-import { Icon } from '../blendx-ui/src';
-import { IconButton } from '@blend-ed/blendx-ui';
-import { Badge, Image } from '@blend-ed/blendx-ui';
+import { Badge, Icon, Image } from '@blend-ed/blendx-ui';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const CourseCard = ({ title, link, image, estimatedTime, price }) => {
   return (
