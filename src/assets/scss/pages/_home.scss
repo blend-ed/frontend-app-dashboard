@@ -1,0 +1,125 @@
+@mixin home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@mixin home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin home-title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-label;
+  color: map-get($neutral-color-levels, "text-strong");
+}
+
+@mixin home-container-2 {
+  padding: 1rem;
+  border-radius: $radius-4;
+  border: 1px solid map-get($neutral-color-levels, "stroke-default");
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@mixin home-title-2 {
+  font-size: $font-size-md;
+  font-weight: $font-weight-label;
+  color: map-get($neutral-color-levels, "text-strong");
+}
+
+@mixin home-link {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-label;
+  color: map-get($neutral-color-levels, "text-default");
+}
+
+.progress-card-container {
+  margin-top: .5rem;
+  @include home-container;
+
+  .progress-card__header {
+    @include home-header;
+
+    .progress-card__title {
+      @include home-title;
+    }
+  }
+}
+
+.updates-container {
+  margin-top: 1.5rem;
+  @include home-container;
+
+  .updates__header {
+    @include home-header;
+
+    .updates__title {
+      @include home-title;
+    }
+  }
+
+  .updates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+
+    .upcoming-events-container {
+      @include home-container-2;
+
+      .upcoming-events__header {
+        @include home-header;
+
+        .upcoming-events__title {
+          @include home-title-2;
+        }
+
+        .upcoming-events__link {
+          @include home-link;
+        }
+      }
+    }
+
+    .recent-activity-container {
+      @include home-container-2;
+
+      .recent-activity__header {
+        @include home-header;
+
+        .recent-activity__title {
+          @include home-title-2;
+        }
+
+        .recent-activity__link {
+          @include home-link;
+        }
+      }
+    }
+  }
+}
+
+.recommended-courses-container {
+  margin-top: 1.5rem;
+  @include home-container;
+
+  .recommended-courses__header {
+    @include home-header;
+
+    .recommended-courses__title {
+      @include home-title;
+    }
+
+    .recommended-courses__link {
+      @include home-link;
+    }
+  }
+
+  .recommended-courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
