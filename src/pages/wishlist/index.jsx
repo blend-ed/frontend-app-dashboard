@@ -7,7 +7,7 @@ import ProgressTab from '../../components/ProgramTab'
 import courseDummyData from '../../dummyData/courseDummyData.json'
 import programDummyData from '../../dummyData/programDummyData.json'
 
-function Course() {
+function WishList() {
     const [activeTab, setActiveTab] = useState('Courses')
     const [searchValue, setSearchValue] = useState('')
     const [filterValue, setFilterValue] = useState('')
@@ -62,7 +62,7 @@ function Course() {
                     </InlineDropdown>
                 </div>
                 <div className="course-body-content">
-                    {activeTab === "Courses" && <CourseTab renderCourses={renderCourses} cardType="progress" />}
+                    {activeTab === "Courses" && <CourseTab renderCourses={renderCourses} />}
                     {activeTab === "Programs" && <ProgressTab renderPrograms={renderPrograms} />}
                 </div>
             </div>
@@ -70,4 +70,4 @@ function Course() {
     )
 }
 
-export default Course
+export default WishList
