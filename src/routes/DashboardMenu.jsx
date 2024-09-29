@@ -15,8 +15,8 @@ const DashboardMenu = [
         href: '/discover'
       },
       {
-        text: 'Favorites',
-        href: '/discover/favorites'
+        text: 'Wishlist',
+        href: '/wishlist'
       },
       {
         text: 'Popular',

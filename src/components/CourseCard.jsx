@@ -2,7 +2,7 @@ import { Badge, Icon, Image, ProgressBar } from '@blend-ed/blendx-ui';
 import propTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-const CourseCard = ({ title, link, image, estimatedTime, price, discover, progress }) => {
+const CourseCard = ({ title, link, image, estimatedTime, price, type, progress }) => {
 
   const navigate = useNavigate();
   return (
@@ -22,15 +22,15 @@ const CourseCard = ({ title, link, image, estimatedTime, price, discover, progre
           </div>
         </div>
         <div className="course-card__footer">
+          {type === 'progress' && <ProgressBar className="course-card__footer-progressbar" progress={progress} type="inline" />}
           {
-            discover ?
-              <ProgressBar className="course-card__footer-progressbar" progress={progress} type="inline" /> :
-              <>
-                <div className="course-card__price">
-                  {price === 0 ? 'Free' : `$${price}`}
-                </div>
-                <Icon icon="share-forward" variant="ghost-gray" type="line" size="sm" className="course-card__share" onClick={() => alert('Share')} />
-              </>
+            type === 'price' &&
+            <>
+              <div className="course-card__price">
+                {price === 0 ? 'Free' : `$${price}`}
+              </div>
+              <Icon icon="share-forward" variant="ghost-gray" type="line" size="sm" className="course-card__share" onClick={() => alert('Share')} />
+            </>
           }
         </div>
       </div >
@@ -44,13 +44,14 @@ CourseCard.propTypes = {
   image: propTypes.string.isRequired,
   estimatedTime: propTypes.string.isRequired,
   price: propTypes.number,
-  discover: propTypes.bool,
+  type: propTypes.oneOf(['price', 'progress']),
   progress: propTypes.number,
 }
 
 CourseCard.defaultProps = {
   price: 0,
   discover: false,
+  type: 'price',
   progress: 0,
 }
 

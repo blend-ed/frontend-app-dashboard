@@ -1,5 +1,5 @@
 import React from 'react'
-import ProgramCard from '../../../components/ProgramCard'
+import ProgramCard from '../components/ProgramCard'
 
 function ProgressTab({ renderPrograms }) {
     return (

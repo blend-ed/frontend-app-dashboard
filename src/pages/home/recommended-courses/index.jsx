@@ -23,6 +23,7 @@ const RecommendedCourses = () => {
             link={course.link}
             image={course.image}
             price={course.price}
+            type="price"
           />
         ))}
       </div>
