@@ -54,6 +54,10 @@
       display: flex;
       justify-content: space-between;
 
+      .course-card__footer-progressbar {
+        margin-top: .25rem;
+      }
+
       .course-card__price {
         font-size: $font-size-md;
         font-weight: $font-weight-label;

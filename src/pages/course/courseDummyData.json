@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Comprehensive Full Stack Web Development Course",
+    "description": "Learn to build web applications using the MERN stack",
+    "estimatedTime": "6 months",
+    "link": "/programs/full-stack-web-dev",
+    "image": "https://picsum.photos/seed/cxvzv/500/500",
+    "price": 16,
+    "courseCount": 10,
+    "progress": 67,
+    "id": 1
+  },
+  {
+    "id": 2,
+    "title": "Complete Data Science and Analytics Program",
+    "description": "Learn to analyze data and make data-driven decisions",
+    "estimatedTime": "6 months",
+    "link": "/programs/data-science",
+    "image": "https://picsum.photos/seed/fdghdfgh/500/500",
+    "price": 10,
+    "courseCount": 3,
+    "progress": 87
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design for User-Friendly Interfaces",
+    "description": "Learn to design user-friendly interfaces and experiences",
+    "estimatedTime": "6 months",
+    "link": "/programs/ui-ux-design",
+    "image": "https://picsum.photos/seed/jyt/500/500",
+    "price": 0,
+    "courseCount": 10,
+    "progress": 50
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Strategies and Techniques",
+    "description": "Learn to promote products and services online",
+    "estimatedTime": "6 months",
+    "link": "/programs/digital-marketing",
+    "image": "https://picsum.photos/seed//500/500",
+    "price": 100,
+    "courseCount": 5,
+    "progress": 35
+  },
+  {
+    "id": 5,
+    "title": "Zntroduction to Machine Learning",
+    "description": "Learn the basics of machine learning and its applications",
+    "estimatedTime": "4 months",
+    "link": "/programs/machine-learning",
+    "image": "https://picsum.photos/seed/kuhjm/500/500",
+    "price": 50,
+    "courseCount": 8,
+    "progress": 75
+  },
+  {
+    "id": 6,
+    "title": "Aybersecurity Fundamentals",
+    "description": "Learn the fundamentals of cybersecurity and how to protect systems",
+    "estimatedTime": "5 months",
+    "link": "/programs/cybersecurity",
+    "image": "https://picsum.photos/seed/wrewf43/500/500",
+    "price": 30,
+    "courseCount": 6,
+    "progress": 60
+  }
+]
