@@ -61,7 +61,7 @@ const ProfileCardLarge = ({ name, username, backgroundSrc, state = "" }) => {
                     {/* showing one button this is in the settings page */}
                     {state == "edit-profile" && <Button
                         size="md"
-                        variant="primary"
+                        variant="link-primary"
                         iconBefore="edit"
                         iconType="fill"
                     >

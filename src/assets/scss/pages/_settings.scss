@@ -3,4 +3,35 @@
     .settings__profile-card-large {
         margin-top: 1rem;
     }
+
+    .settings__profile-form-input {
+        display: grid;
+        gap: 1rem;
+        max-width: 40rem;
+
+        .settings__profile-input-div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-label;
+            color: map-get($neutral-color-levels, "text-strong");
+
+
+            .settings__profile-input-label {
+                width: 18rem;
+                margin-left: .5rem;
+            }
+        }
+
+        .settings__profile-footer-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+
+            >* {
+                margin-left: 1rem;
+            }
+        }
+    }
 }

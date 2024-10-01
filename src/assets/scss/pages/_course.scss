@@ -1,0 +1,17 @@
+.course-body {
+    display: grid;
+    grid-template-rows: 1fr;
+
+    .course-body-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        .inlinedropdown-body.inlinedropdown-border {
+            min-width: 7rem;
+        }
+    }
+
+}

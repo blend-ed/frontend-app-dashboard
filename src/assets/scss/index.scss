@@ -3,6 +3,8 @@
 @import 'pages/home';
 @import 'pages/profile';
 @import 'pages/settings';
+@import 'pages/course';
+@import 'pages/wishlist';
 
 // Components
 @import 'components/event-card';
@@ -11,3 +13,5 @@
 @import 'components/program-card';
 @import 'components/progress-card';
 @import 'components/profile-card-large';
+@import 'components/course-tab';
+@import 'components/program-tab';

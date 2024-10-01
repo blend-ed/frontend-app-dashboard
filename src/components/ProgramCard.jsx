@@ -1,10 +1,10 @@
 import React from 'react';
-import { Image, Icon, Button } from '@blend-ed/blendx-ui';
+import { Image, Button } from '@blend-ed/blendx-ui';
 import propTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { Badge } from '@blend-ed/blendx-ui';
 
-const ProgramCard = ({ title, description, estimatedTime, link, image, price, courseCount }) => {
+const ProgramCard = ({ title, description, estimatedTime, link, image, price, courseCount, discover }) => {
   const navigate = useNavigate();
   return (
     <div className="program-card">
@@ -15,9 +15,9 @@ const ProgramCard = ({ title, description, estimatedTime, link, image, price, co
             <div className="program-card__title">
               {title}
             </div>
-            <div className="program-card__price">
+            {!discover && <div className="program-card__price">
               {price === 0 ? 'Free' : `$${price}`}
-            </div>
+            </div>}
           </div>
           <div className="program-card__description">
             {description}
@@ -49,11 +49,13 @@ ProgramCard.propTypes = {
   image: propTypes.string.isRequired,
   price: propTypes.number,
   courseCount: propTypes.number,
+  discover: propTypes.bool,
 }
 
 ProgramCard.defaultProps = {
   price: 0,
   courseCount: 0,
+  discover: false,
 }
 
 

@@ -29,13 +29,29 @@ const DashboardIndex = () => {
     });
 
     useEffect(() => {
-        const currentMenuItem = DashboardMenu.find(item => item.href === location.pathname);
-        if (currentMenuItem) {
-            if (currentMenuItem.text === 'Home') {
-                setTitle(`Good ${timeOfDay()}, ${user.name}`);
+        const findMenuItem = (items, parent = null) => {
+            for (const item of items) {
+                if (item.href === location.pathname) {
+                    return { item, parent };
+                }
+                if (item.children) {
+                    const childResult = item.children.find(child => child.href === location.pathname);
+                    if (childResult) {
+                        return { item: childResult, parent: item };
+                    }
+                }
             }
-            else {
-                setTitle(currentMenuItem.text);
+            return null;
+        };
+
+        const result = findMenuItem(DashboardMenu);
+        if (result) {
+            const { item, parent } = result;
+            if (item.text === 'Home') {
+                setTitle(`Good ${timeOfDay()}, ${user.name}`);
+            } else {
+                const title = parent ? `${parent.text} / ${item.text}` : item.text;
+                setTitle(title);
             }
         }
     }, [location.pathname]);
