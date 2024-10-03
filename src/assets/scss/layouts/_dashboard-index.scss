@@ -1,0 +1,9 @@
+.dashboard-title {
+    font-size: 1.25rem;
+    font-weight: $font-weight-label;
+    color: map-get($neutral-color-levels, "text-stong");
+
+    &.muted {
+        color: map-get($neutral-color-levels, "text-default");
+    }
+}

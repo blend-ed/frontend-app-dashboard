@@ -8,7 +8,8 @@
     "price": 16,
     "courseCount": 10,
     "progress": 67,
-    "id": 1
+    "id": 1,
+    "author": "John Doe"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "image": "https://picsum.photos/seed/fdghdfgh/500/500",
     "price": 10,
     "courseCount": 3,
-    "progress": 87
+    "progress": 87,
+    "author": "Jane Doe"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "image": "https://picsum.photos/seed/jyt/500/500",
     "price": 0,
     "courseCount": 10,
-    "progress": 50
+    "progress": 50,
+    "author": "John Doe"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "image": "https://picsum.photos/seed//500/500",
     "price": 100,
     "courseCount": 5,
-    "progress": 35
+    "progress": 35,
+    "author": "Jane Doe"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "image": "https://picsum.photos/seed/kuhjm/500/500",
     "price": 50,
     "courseCount": 8,
-    "progress": 75
+    "progress": 75,
+    "author": "John Doe"
   },
   {
     "id": 6,
@@ -63,6 +68,7 @@
     "image": "https://picsum.photos/seed/wrewf43/500/500",
     "price": 30,
     "courseCount": 6,
-    "progress": 60
+    "progress": 60,
+    "author": "Jane Doe"
   }
 ]

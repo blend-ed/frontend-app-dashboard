@@ -3,11 +3,12 @@ import { Image, Button } from '@blend-ed/blendx-ui';
 import propTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { Badge } from '@blend-ed/blendx-ui';
+import classNames from 'classnames';
 
-const ProgramCard = ({ title, description, estimatedTime, link, image, price, courseCount, discover }) => {
+const ProgramCard = ({ title, description, estimatedTime, link, image, price, courseCount, discover, size }) => {
   const navigate = useNavigate();
   return (
-    <div className="program-card">
+    <div className={classNames("program-card", `program-card-${size}`)}>
       <Image src={image} alt={title} className="program-card__image" />
       <div className="program-card__content">
         <div className="program-card__body">
