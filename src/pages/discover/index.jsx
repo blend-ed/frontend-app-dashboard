@@ -36,7 +36,7 @@ function Discover() {
             </RecommendationsRow>
 
             {/* recomended program */}
-            <RecommendationsRow title="Recomended Courses" seeAllLink={"/program"} >
+            <RecommendationsRow title="Recomended Programs" seeAllLink={"/program"} >
                 {courseDummyData.slice(0, 4).map((course, index) => (
                     <BlendxCard key={index} title={course.title} image={course.image} estimatedTime={course.estimatedTime} price={course.price} type="price" variant="Program" totalCourses={`${course.courseCount} Courses`} />
                 ))}
