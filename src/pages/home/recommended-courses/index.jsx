@@ -24,6 +24,7 @@ const RecommendedCourses = () => {
             image={course.image}
             price={course.price}
             type="price"
+            badgeText="Course"
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { SideNavbar, SideNavbarContainer, PageHeader } from "@blend-ed/blendx-ui";
+import { SideNavbar, PageHeader } from "@blend-ed/blendx-ui";
 import { DashboardFooter, DashboardMenu, ProfileMenu } from "../routes/DashboardMenu";
 import { getAuthenticatedUser } from "@edx/frontend-platform/auth";
 
@@ -30,54 +30,58 @@ const DashboardIndex = () => {
 
     useEffect(() => {
         const findMenuItem = (items, parent = null) => {
-            for (const item of items) {
-                if (item.href === location.pathname) {
-                    return { item, parent };
-                }
-                if (item.children) {
-                    const childResult = item.children.find(child => child.href === location.pathname);
-                    if (childResult) {
-                        return { item: childResult, parent: item };
+            const paramsPath = location.pathname.split('/');
+            if (location.pathname.split('/').length > 2) {
+                return { item: { text: paramsPath[2].replace(/%20/g, " ") }, parent: null };
+            } else {
+                for (const item of items) {
+                    if (item.href === location.pathname) {
+                        return { item, parent };
+                    }
+                    if (item.children) {
+                        const childResult = item.children.find(child => child.href === location.pathname);
+                        if (childResult) {
+                            return { item: childResult, parent: item };
+                        }
                     }
                 }
+                return null;
             }
-            return null;
         };
 
         const result = findMenuItem(DashboardMenu);
+
         if (result) {
             const { item, parent } = result;
             if (item.text === 'Home') {
-                setTitle(`Good ${timeOfDay()}, ${user.name}`);
+                setTitle(<span className="dashboard-title">Good {timeOfDay()}, {user.name}</span>);
             } else {
-                const title = parent ? `${parent.text} / ${item.text}` : item.text;
-                setTitle(title);
+                setTitle(<><span className="dashboard-title muted">{parent?.text} {parent?.text && "/"}</span><span className="dashboard-title"> {item?.text}</span></>);
+
             }
         }
     }, [location.pathname]);
 
 
     return (
-        <SideNavbarContainer>
-            <SideNavbar
-                logo={'https://i.postimg.cc/tTr1MbMr/logo-1-1.png'}
-                logoTrademark={'https://i.postimg.cc/SNRLqTL2/logo-1.png'}
-                collapsed={false}
-                user={user}
-                dashboardMenu={DashboardMenu}
-                dashboardFooter={DashboardFooter}
-                profileMenu={ProfileMenu}
-            />
-            <div className="content">
-                <PageHeader
-                    title={title}
-                    streakCount={3}
-                    mailCount={5}
-                    notificationCount={10}
-                />
-                <Outlet />
-            </div>
-        </SideNavbarContainer>
+        <SideNavbar
+            logo={'https://i.postimg.cc/tTr1MbMr/logo-1-1.png'}
+            logoTrademark={'https://i.postimg.cc/SNRLqTL2/logo-1.png'}
+            collapsed={false}
+            user={user}
+            dashboardMenu={DashboardMenu}
+            dashboardFooter={DashboardFooter}
+            profileMenu={ProfileMenu}
+        >
+            <PageHeader
+                streakCount={3}
+                mailCount={5}
+                notificationCount={10}
+            >
+                {title}
+            </PageHeader>
+            <Outlet />
+        </SideNavbar>
     );
 };
 
