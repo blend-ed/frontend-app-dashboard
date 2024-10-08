@@ -1,6 +1,6 @@
 [
   {
-    "title": "Comprehensive Full Stack Web Development Course",
+    "title": "Full Stack Web Development",
     "description": "Learn to build web applications using the MERN stack",
     "estimatedTime": "6 months",
     "link": "/programs/full-stack-web-dev",
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "title": "Complete Data Science and Analytics Program",
+    "title": "Data Science and Analytics",
     "description": "Learn to analyze data and make data-driven decisions",
     "estimatedTime": "6 months",
     "link": "/programs/data-science",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "title": "UI/UX Design for User-Friendly Interfaces",
+    "title": "UI/UX Design for User-Friendly",
     "description": "Learn to design user-friendly interfaces and experiences",
     "estimatedTime": "6 months",
     "link": "/programs/ui-ux-design",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "title": "Digital Marketing Strategies and Techniques",
+    "title": "Digital Marketing",
     "description": "Learn to promote products and services online",
     "estimatedTime": "6 months",
     "link": "/programs/digital-marketing",
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "title": "Zntroduction to Machine Learning",
+    "title": "Zachine Learning",
     "description": "Learn the basics of machine learning and its applications",
     "estimatedTime": "4 months",
     "link": "/programs/machine-learning",

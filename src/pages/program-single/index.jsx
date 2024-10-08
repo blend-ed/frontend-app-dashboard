@@ -1,7 +1,7 @@
 import React from 'react'
 import { withParams } from '../../utils/hoc'
 import CourseExploreCard from '../../components/CourseExploreCard'
-import CourseCard from '../../components/CourseCard'
+import BlendxCard from '../../components/BlendxCard'
 import { Accordion } from "@blend-ed/blendx-ui"
 import ProgramCard from '../../components/ProgramCard'
 import programDummyData from '../../dummyData/programDummyData.json'
@@ -53,7 +53,7 @@ function ProgramSingle(props) {
                     <h3 className='program-single__description-title'>Top Programs In blend-ed</h3>
                     <div>
                         {courseDummyData.slice(0, 3).map((course, index) => (
-                            <CourseCard className="program-single__program-card" key={index} title={course.title} link={course.link} image={course.image} estimatedTime={course.estimatedTime} price={course.price} type="price" badgeText="Program" />
+                            <BlendxCard key={index} title={course.title} image={course.image} estimatedTime={course.estimatedTime} totalCourses={`${course.courseCount} Courses`} price={course.price} type="price" variant="Program" />
                         ))}
                     </div>
 

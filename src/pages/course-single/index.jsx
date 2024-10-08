@@ -2,9 +2,8 @@ import React from 'react'
 import { withParams } from '../../utils/hoc'
 import CourseExploreCard from '../../components/CourseExploreCard'
 import { Accordion } from "@blend-ed/blendx-ui"
-import CourseCard from '../../components/CourseCard'
 import courseDummyData from '../../dummyData/courseDummyData.json'
-
+import BlendxCard from '../../components/BlendxCard'
 
 function CourseSingle(props) {
     const { params } = props
@@ -43,9 +42,11 @@ function CourseSingle(props) {
                 <div className="course-single__popular-course">
                     <h3 className='course-single__description-title'>Top Courses In blend-ed</h3>
                     <div>
-                        {courseDummyData.slice(0, 3).map((course, index) => (
-                            <CourseCard className="course-single__course-card" key={index} title={course.title} link={course.link} image={course.image} estimatedTime={course.estimatedTime} price={course.price} type="price" badgeText="Course" />
-                        ))}
+                        {
+                            courseDummyData.slice(0, 3).map((course, index) => (
+                                <BlendxCard key={index} title={course.title} image={course.image} estimatedTime={course.estimatedTime} price={course.price} type="price" variant="Course" />
+                            ))
+                        }
                     </div>
 
                 </div>

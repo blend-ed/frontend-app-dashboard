@@ -1,0 +1,32 @@
+.recommendations-row-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+
+    .recommendations-row__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ;
+
+        .recommendations-row__title {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-label;
+            color: map-get($neutral-color-levels, "text-strong");
+        }
+
+        .recommendations-row__link {
+            font-size: $font-size-sm;
+            font-weight: $font-weight-label;
+            color: map-get($neutral-color-levels, "text-default");
+        }
+    }
+
+    .recommendations-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}

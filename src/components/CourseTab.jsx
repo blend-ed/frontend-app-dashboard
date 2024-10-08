@@ -1,13 +1,12 @@
 import React from 'react'
-import CourseCard from '../components/CourseCard'
+import BlendxCard from './BlendxCard'
 
 function CourseTab({ renderCourses, cardType }) {
 
     return (
         <div className="course-cards-container">
             {renderCourses.map((course, index) => (
-                <CourseCard key={course.id} title={course.title} description={course.description} image={course.image} estimatedTime={course.estimatedTime} price={course.price} type={cardType} progress={course.progress} badgeText="Course"
-                />
+                <BlendxCard key={index} title={course.title} image={course.image} estimatedTime={course.estimatedTime} price={course.price} type="price" variant="Course" />
             ))}
         </div>
     )
