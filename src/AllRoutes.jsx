@@ -8,6 +8,7 @@ import Course from "./pages/course";
 import WishList from "./pages/wishlist";
 import CourseSingle from "./pages/courseSingle";
 import ProgramSingle from "./pages/programSingle"
+import Progress from "./pages/progress";
 
 const AllRoutes = () => {
     return (
@@ -17,6 +18,7 @@ const AllRoutes = () => {
                 <Route path="/course" element={<Course />} />
                 <Route path="/course/:id" element={<CourseSingle />} />
                 <Route path="/program/:id" element={<ProgramSingle />} />
+                <Route path="/progress" element={<Progress />} />
                 <Route path="/wishlist" element={<WishList />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/profile" element={<Profile />} />

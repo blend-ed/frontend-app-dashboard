@@ -1,0 +1,57 @@
+.course-summary-progress-table {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+@mixin card-container {
+    border: 1px solid map-get($neutral-color-levels, "stroke-subtle");
+    border-radius: $radius-6;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+@mixin card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin card-title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-label;
+    color: map-get($neutral-color-levels, "text-strong");
+}
+
+// styles for the engagement-chart
+.engagement-chart__card {
+    @include card-container;
+    height: 21rem;
+
+    .engagement-chart__header {
+        @include card-header;
+
+        .engagement-chart__left {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .engagement-chart__title {
+                @include card-title;
+            }
+        }
+
+        .engagement-chart__right {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+
+        }
+    }
+
+
+}
