@@ -37,6 +37,11 @@
         height: 2.5rem;
       }
 
+      .course-card__info-panel-items {
+        display: flex;
+        gap: .5rem;
+      }
+
       .course-card__est-time {
         font-size: $font-size-xs;
         font-weight: $font-weight-label;

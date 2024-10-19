@@ -1,0 +1,65 @@
+@mixin div-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin div-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-banner__wrapper {
+    @include div-row;
+    justify-content: space-between;
+    height: 10rem;
+    border-radius: $radius-6;
+
+
+    .discover-banner__right {
+        @include div-column;
+        justify-content: space-between;
+        margin: 1.25rem 1rem;
+
+        .discover-banner__right-top {
+            @include div-column;
+
+            .discover-banner__title {
+                font-weight: $font-weight-label;
+                color: map-get($neutral-color-levels, "text-strong");
+                font-size: $font-size-xl;
+                display: flex;
+                align-items: center;
+            }
+
+            .discover-banner__description {
+                font-weight: $font-weight-label;
+                color: map-get($neutral-color-levels, "text-default");
+                font-size: $font-size-sm;
+            }
+        }
+
+        .discover-banner__right-bottom {
+            :first-child {
+                padding-right: .75rem;
+            }
+        }
+    }
+
+    .discover-banner__left {
+        .discover-banner__left-image {
+            height: 10rem;
+            object-fit: cover;
+        }
+    }
+
+    @each $color, $value in $theme-colors {
+        &.#{$color}-banner-background {
+            background-color: theme-color($color, "minimal");
+        }
+    }
+
+    .badge {
+        margin-left: .5rem;
+    }
+
+}

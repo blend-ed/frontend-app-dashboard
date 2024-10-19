@@ -1,0 +1,31 @@
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-section {
+    @include flex-column;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+
+    .search-section__heading {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-label;
+        color: map-get($neutral-color-levels, "text-strong");
+        line-height: 1rem;
+    }
+
+    .search-section__search-bar {
+        width: 34rem;
+    }
+
+    .search-tags {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .5rem;
+    }
+}

@@ -23,6 +23,7 @@ const AllRoutes = () => {
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/settings" element={<Settings />} />
+                <Route path="/discover" element={<Discover />} />
             </Route>
         </Routes>
     )
