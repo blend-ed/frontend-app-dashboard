@@ -7,8 +7,6 @@ import programDummyData from '../../dummyData/programDummyData.json'
 
 import BlendxCard from '../../components/BlendxCard'
 
-
-
 function Discover() {
 
     const tags = ["Top Course", "New Course", "Trending Course", "Popular Course", "Recommended Course", "Physics", "Chemistry", "Biology", "Mathematics", "Computer Science", "Engineering"]
