@@ -6,9 +6,10 @@ import Profile from "./pages/profile";
 import Settings from "./pages/settings";
 import Course from "./pages/course";
 import WishList from "./pages/wishlist";
-import CourseSingle from "./pages/courseSingle";
-import ProgramSingle from "./pages/programSingle"
+import CourseSingle from "./pages/course-single";
+import ProgramSingle from "./pages/program-single"
 import Progress from "./pages/progress";
+import Discover from './pages/discover';
 
 const AllRoutes = () => {
     return (
