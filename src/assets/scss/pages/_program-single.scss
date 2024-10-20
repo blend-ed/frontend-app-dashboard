@@ -1,0 +1,63 @@
+.program-single__wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .program-single__left {
+        margin-right: 1.5rem;
+        max-width: 65%;
+
+        .program-single__description-text {
+            font-size: $font-size-sm;
+            color: map-get($neutral-color-levels, "text-default");
+            font-weight: $font-weight-regular;
+            margin: 0;
+        }
+
+        .program-single__description-title {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-label;
+            color: map-get($neutral-color-levels, "text-stong");
+            margin-bottom: .25rem;
+        }
+
+        .program-single__overview {
+            margin-top: 2rem;
+        }
+
+        .program-single__content {
+            margin-top: 1rem;
+
+            .program-single__accordion {
+                margin: .5rem 0 .5rem 0;
+
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                }
+            }
+        }
+
+        .program-single__popular-program {
+            margin-top: 2rem;
+
+            >:nth-child(2) {
+                margin-top: .75rem;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+
+            .program-single__program-card {
+                width: 13.5rem;
+            }
+
+        }
+    }
+
+    .program-single__right {
+        max-width: 35%;
+    }
+
+}

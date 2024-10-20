@@ -1,16 +1,17 @@
 import { Badge, Icon, Image, ProgressBar } from '@blend-ed/blendx-ui';
+import classNames from 'classnames';
 import propTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-const CourseCard = ({ title, link, image, estimatedTime, price, type, progress }) => {
+const CourseCard = ({ title, link, image, estimatedTime, price, type, progress, className, badgeText }) => {
 
   const navigate = useNavigate();
   return (
-    <div className="course-card" onClick={() => navigate(link)}>
+    <div className={classNames("course-card", className)} onClick={() => navigate(link)}>
       <Image src={image} alt={title} className="course-card__image" />
       <div className="course-card__body">
-        <Badge variant="light-yellow" className="course-card__badge">
-          Course
+        <Badge variant={badgeText === "Course" ? "light-yellow" : "light-primary"} className="course-card__badge">
+          {badgeText}
         </Badge>
         <div className="course-card__head">
           <div className="course-card__title">
@@ -46,6 +47,8 @@ CourseCard.propTypes = {
   price: propTypes.number,
   type: propTypes.oneOf(['price', 'progress']),
   progress: propTypes.number,
+  className: propTypes.string,
+  badgeText: propTypes.string
 }
 
 CourseCard.defaultProps = {
@@ -53,6 +56,8 @@ CourseCard.defaultProps = {
   discover: false,
   type: 'price',
   progress: 0,
+  className: '',
+  badgeText: ''
 }
 
 export default CourseCard;

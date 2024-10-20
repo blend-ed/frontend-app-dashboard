@@ -34,7 +34,7 @@
     "url": "https://github.com/blend-ed/frontend-app-dashboard/issues"
   },
   "dependencies": {
-    "@edx/brand": "npm:@blend-ed/blendx-brand.v1@^3.0.15",
+    "@edx/brand": "npm:@blend-ed/blendx-brand.v1@^3.0.18",
     "@edx/frontend-platform": "^7.1.2",
     "@fortawesome/fontawesome-svg-core": "1.3.0",
     "@fortawesome/free-brands-svg-icons": "5.15.4",
@@ -43,7 +43,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@openedx/frontend-slot-footer": "^1.0.2",
     "@openedx/paragon": "^22.3.0",
-    "@blend-ed/blendx-ui": "^3.0.20",
+    "@blend-ed/blendx-ui": "^3.0.44",
     "core-js": "3.22.2",
     "prop-types": "15.8.1",
     "react": "17.0.2",
