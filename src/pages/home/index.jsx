@@ -9,7 +9,27 @@ import RecommendationsRow from "../../components/RecommendationsRow";
 import courseDummyData from '../../dummyData/courseDummyData.json'
 import programDummyData from '../../dummyData/programDummyData.json'
 
+import { useQuery, gql } from '@apollo/client';
+
+const GET_USER_DATA = gql`
+  query MyQuery {
+    users {
+      id
+    }
+  }
+`;
+
 const Home = () => {
+    const { error, loading, data } = useQuery(GET_USER_DATA, {
+        context: {
+            headers: {
+                'x-hasura-role': 'admin',
+            },
+        },
+    });
+
+    console.log(error, loading, data);
+
     return (
         <main>
             <div className="progress-card-container">
