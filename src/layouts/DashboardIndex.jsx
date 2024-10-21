@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { SideNavbar, PageHeader } from "@blend-ed/blendx-ui";
-import { DashboardFooter, DashboardMenu, ProfileMenu } from "../routes/DashboardMenu";
+import getDashboardMenu from "../routes/DashboardMenu";
 import { getAuthenticatedUser } from "@edx/frontend-platform/auth";
+import { SideNavbar, PageHeader } from "@blend-ed/blendx-ui";
 
 
 const DashboardIndex = () => {
+    const { DashboardMenu, DashboardFooter, ProfileMenu } = getDashboardMenu();
     const location = useLocation();
     const [title, setTitle] = useState("");
 
     const user = {
         name: getAuthenticatedUser().name,
         email: getAuthenticatedUser().email,
-        role: getAuthenticatedUser().roles?.[0] || 'Student',
+        role: getAuthenticatedUser().administrator ? 'Admin' : 'Student',
         image: 'https://i.postimg.cc/7Z8vQ0Y9/Rectangle-2.png'
     };
+
+    console.log(getAuthenticatedUser());
 
     // get the time of the day, like morning, afternoon, evening
     const timeOfDay = (() => {
